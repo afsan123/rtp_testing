@@ -18,5 +18,6 @@ public class CompanyDescriptionTest extends BaseClass {
         loginPage.enterEmail(email);
         loginPage.enterPassword(password);
         loginPage.clickOnLoginButton();
+
     }
 }
