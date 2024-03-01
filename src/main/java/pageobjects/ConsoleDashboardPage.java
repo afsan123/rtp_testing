@@ -1,7 +1,6 @@
 package pageobjects;
 
 import aquality.selenium.elements.interfaces.IButton;
-import aquality.selenium.elements.interfaces.IElement;
 import aquality.selenium.elements.interfaces.ILabel;
 import aquality.selenium.forms.Form;
 import org.openqa.selenium.By;
