@@ -2,6 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageobjects.ConsoleDashboardPage;
 import pageobjects.LoginPage;
 import utility.TestDataReader;
 
@@ -19,5 +20,9 @@ public class CompanyDescriptionTest extends BaseClass {
         loginPage.enterPassword(password);
         loginPage.clickOnLoginButton();
 
+        ConsoleDashboardPage consoleDashboardPage = new ConsoleDashboardPage();
+        consoleDashboardPage.clickOnActiveDashboardDropdown();
+        consoleDashboardPage.changeActiveDashboard();
+        consoleDashboardPage.accessPromptTest();
     }
 }
