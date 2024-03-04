@@ -10,7 +10,7 @@ public class LoginPage extends Form {
     private final ITextBox passwordInputField = getElementFactory().getTextBox(By.xpath("//input[@id='-password-login']"), "Password Input Field");
     private final IButton loginButton = getElementFactory().getButton(By.xpath("//button[text()='Login']"), "Login Button");
     public LoginPage() {
-        super(By.xpath("//h3[contains(text(), 'Login')]"), "Login Page's Unique Element");
+        super(By.xpath("//span[contains(text(), 'Login with Google')]"), "Login Page's Unique Element");
     }
 
     public void enterEmail(String email) {

@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjects.ConsoleDashboardPage;
 import pageobjects.LoginPage;
+import pageobjects.PromptTestPage;
 import utility.TestDataReader;
 
 public class CompanyDescriptionTest extends BaseClass {
@@ -24,5 +25,12 @@ public class CompanyDescriptionTest extends BaseClass {
         consoleDashboardPage.clickOnActiveDashboardDropdown();
         consoleDashboardPage.changeActiveDashboard();
         consoleDashboardPage.accessPromptTest();
+
+        PromptTestPage promptTestPage = new PromptTestPage();
+        Assert.assertTrue(promptTestPage.state().waitForDisplayed(), "Prompt Test Page Not Displayed");
+
+        promptTestPage.clickOnSocialBrandSetupBtn();
+        promptTestPage.clickOnBrandInfoTab();
+
     }
 }

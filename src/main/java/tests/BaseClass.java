@@ -15,6 +15,7 @@ public class BaseClass {
         browser = AqualityServices.getBrowser();
         browser.maximize();
         browser.goTo(ConfigReader.getAppUrl());
+
     }
 
     @AfterMethod
