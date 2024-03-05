@@ -2,10 +2,12 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageobjects.BrandInformationPage;
 import pageobjects.ConsoleDashboardPage;
 import pageobjects.LoginPage;
 import pageobjects.PromptTestPage;
 import utility.TestDataReader;
+
 
 public class CompanyDescriptionTest extends BaseClass {
 
@@ -22,6 +24,7 @@ public class CompanyDescriptionTest extends BaseClass {
         loginPage.clickOnLoginButton();
 
         ConsoleDashboardPage consoleDashboardPage = new ConsoleDashboardPage();
+
         consoleDashboardPage.clickOnActiveDashboardDropdown();
         consoleDashboardPage.changeActiveDashboard();
         consoleDashboardPage.accessPromptTest();
@@ -32,5 +35,9 @@ public class CompanyDescriptionTest extends BaseClass {
         promptTestPage.clickOnSocialBrandSetupBtn();
         promptTestPage.clickOnBrandInfoTab();
 
+        BrandInformationPage brandInformationPage = new BrandInformationPage();
+        Assert.assertTrue(brandInformationPage.state().waitForDisplayed(), "Brand Information Page Not Opened");
+
+        brandInformationPage.clickOnVersions();
     }
 }
